@@ -14,18 +14,18 @@
             <div class="container">
                 <div>
                     <label><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" required #uname ngModel [pattern]="emailPattern">
+                    <input type="text" placeholder="Enter Username" name="userName" required #userName ngModel [pattern]="emailPattern">
                 </div>
                 <label><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required #psw NgModel>
+                <input type="password" placeholder="Enter Password" name="password" required #password NgModel>
                 <div>
-                    <button type="submit" [disabled]="!registerForm.valid">Login </button>
+                    <button type="submit" (click)="login(userName.value, password.value)">Login </button>
                 </div>
             </div>
 
 
             <div class="container" style="background-color:#f1f1f1">
-                <span class="psw"><h3>Not yet a member?</h3> <a href="#">Register here?</a></span>
+                <span class="psw"><h3>Not yet a member?</h3> <button (click)="registrationForm()">Register here?</button></span>
             </div>
         </form>
 

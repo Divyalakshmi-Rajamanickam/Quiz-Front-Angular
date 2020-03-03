@@ -1,15 +1,15 @@
 #img {
     float: left;
-    margin-top: 120px;
-    margin-left: 70px;
+    margin-top: 140px;
+    margin-left: 50px;
 }
 
 form {
     border: 3px solid #29a50a;
     float: right;
-    margin-right: 100px;
+    margin-right: 200px;
     margin-top: 120px;
-    width: 400px;
+    width: 300px;
 }
 
 input[type=text],

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {User} from '../login/user'
 
 @Injectable()
 export class UserService {
@@ -19,29 +20,13 @@ export class UserService {
 
   //---------------- Http Methods---------------
 
-  insertUser(name: string, password: string) {
-    var body = {
-      UserName: name,
-      Password: password
-      
-    }
-    return this.http.post(this.rootUrl + '/api/InsertUser', body);
+  get<User>(user:User) {
+    return this.http.get<User>("http://localhost:8080/user/login",user);
   }
 
-  getUsername() {
-    return this.http.get(this.rootUrl + '/api/Questions');
+  register(user:User){
+    return this.http.post<User>("http://localhost:8080/user/create",user);
   }
 
-  getPassword() {
-    // var body = this.qns.map(x => x.QnID);
-    // return this.http.post(this.rootUrl + '/api/Answers', body);
-  }
-
-  submit() {
-    // var body = JSON.parse(localStorage.getItem('participant'));
-    // body.Score = this.correctAnswerCount;
-    // body.TimeSpent = this.seconds;
-    // return this.http.post(this.rootUrl + "/api/UpdateOutput", body);
-  }
 
 }
