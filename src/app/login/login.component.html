@@ -1,0 +1,33 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="page-wrap">
+    <div>
+        <img id="img" src="/assets/imgs/main-img.jpg">
+    </div>
+
+    <div class="user-login">
+
+        <!--Step 1 : Adding HTML-->
+        <form #registerForm="ngForm">
+            <h1 align="center">Login Here</h1>
+
+            <div class="container">
+                <div>
+                    <label><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required #uname ngModel [pattern]="emailPattern">
+                </div>
+                <label><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required #psw NgModel>
+                <div>
+                    <button type="submit" [disabled]="!registerForm.valid">Login </button>
+                </div>
+            </div>
+
+
+            <div class="container" style="background-color:#f1f1f1">
+                <span class="psw"><h3>Not yet a member?</h3> <a href="#">Register here?</a></span>
+            </div>
+        </form>
+
+    </div>
+</div>

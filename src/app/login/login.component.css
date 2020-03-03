@@ -1,0 +1,55 @@
+#img {
+    float: left;
+    margin-top: 120px;
+    margin-left: 70px;
+}
+
+form {
+    border: 3px solid #29a50a;
+    float: right;
+    margin-right: 100px;
+    margin-top: 120px;
+    width: 400px;
+}
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+/*set a style for the buttons*/
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.user-login {
+    float: right;
+    display: grid;
+    /* single column layout */
+    grid-template-columns: 1fr;
+    /* have some gap in between elements*/
+    grid-gap: 30px;
+    padding: 0% 3%;
+}
+
+.page-wrap {
+    width: 1500px;
+    margin: 0 auto;
+}
