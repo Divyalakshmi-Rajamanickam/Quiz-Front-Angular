@@ -22,11 +22,28 @@ export class LoginComponent implements OnInit {
   }
 
   user :User;
+  
 
   login(username,password){
     let user = new User(username,password,null,null,null,null)
     console.log("login component.login: ", user);
-  this.userService.get<User>(this.user).subscribe(result => console.log(this.user));
+  if(this.userService.get<User>(this.user).subscribe()){
+    this.router.navigateByUrl('quiz');
   }
+  else{
+    alert("invalid username or password");
+  }
+  }
+  // this.userService.get<User>(this.user).subscribe(
+  //   response=>{
+  //     if(response === true){
+  //      this.router.navigateByUrl('quiz');
+  //    }
+  //   },
+  //   err=>{
+  //     alert("invalid username or password");
+  //    }
+  // )
+  //   }
 
 }

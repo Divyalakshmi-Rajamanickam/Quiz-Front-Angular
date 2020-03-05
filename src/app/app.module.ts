@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { UserService } from './_service/user.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { QuizService } from './shared/quiz.service';
 
 
 @NgModule({
