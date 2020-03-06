@@ -20,8 +20,8 @@ export class UserService {
 
   //---------------- Http Methods---------------
 
-  get<User>(user:User) {
-    return this.http.get<User>("http://localhost:8080/user/login",user);
+  post(user:User) {
+    return this.http.post<boolean>("http://localhost:8080/user/login",user);
   }
 
   register(user:User){

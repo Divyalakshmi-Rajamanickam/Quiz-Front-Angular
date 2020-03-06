@@ -27,23 +27,26 @@ export class LoginComponent implements OnInit {
   login(username,password){
     let user = new User(username,password,null,null,null,null)
     console.log("login component.login: ", user);
-  if(this.userService.get<User>(this.user).subscribe()){
-    this.router.navigateByUrl('quiz');
-  }
-  else{
-    alert("invalid username or password");
-  }
-  }
-  // this.userService.get<User>(this.user).subscribe(
-  //   response=>{
-  //     if(response === true){
-  //      this.router.navigateByUrl('quiz');
-  //    }
-  //   },
-  //   err=>{
-  //     alert("invalid username or password");
-  //    }
-  // )
-  //   }
+  // if(this.userService.post(user).subscribe()){
+  //   this.router.navigateByUrl('quiz');
+  // }
+  // else{
+  //   alert("invalid username or password");
+  // }
+  // }
+  this.userService.post(user).subscribe(
+    response=>{
+      if(response === true){
+       this.router.navigateByUrl('quiz');
+     }
+     else{
+      alert("invalid username or password");
+     }
+    },
+    (err)=>{
+      alert("invalid username or password");
+     }
+  )
+    }
 
 }

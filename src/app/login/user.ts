@@ -9,16 +9,16 @@ export class User{
     constructor(userName,password,firstName,lastName,email,type){
         this.userName=userName;
         this.password=password;
-        if(firstName){
+        if(firstName!=null){
             this.firstName=firstName;
         }
-        if(email){
+        if(email!= null){
         this.email=email;
         }
-        if(lastName){
+        if(lastName != null){
         this.lastName=lastName;
         }
-        if(type){
+        if(type!=null){
             this.type=type;
         }
     }
