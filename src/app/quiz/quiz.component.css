@@ -1,5 +1,7 @@
 input[type="radio"].quiz-radio {
-    margin-right: 8px;
+    margin-top: 15px;
+    margin-right: 12px;
+    padding: 20px;
 }
 
 .btn:focus,
